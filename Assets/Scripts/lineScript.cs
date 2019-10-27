@@ -9,11 +9,15 @@ public class lineScript : MonoBehaviour
     public Transform connectedObject;
     private float maxDistance;
 
+    private SpriteRenderer sr;
+
     void Start()
     {
         lr = GetComponent<LineRenderer>();
 
         maxDistance = GetComponentInParent<CircleCollider2D>().radius;
+
+        sr = transform.parent.GetChild(0).GetComponent<SpriteRenderer>();
     }
     
     void Update()
@@ -27,7 +31,7 @@ public class lineScript : MonoBehaviour
             Destroy(gameObject);
         }
         
-        lr.startColor = transform.parent.parent.GetComponent<SpriteRenderer>().color;
+        lr.startColor = sr.color;
         lr.endColor = connectedObject.GetComponent<SpriteRenderer>().color;
 
         if (!GetComponentInParent<connector>().connectedObjects.Contains(connectedObject.gameObject))

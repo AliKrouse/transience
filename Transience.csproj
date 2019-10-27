@@ -616,7 +616,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\colorChanger.cs" />
     <Compile Include="Assets\Scripts\connector.cs" />
+    <Compile Include="Assets\Scripts\enforceGravity.cs" />
     <Compile Include="Assets\Scripts\lineScript.cs" />
+    <Compile Include="Assets\Scripts\planetScript.cs" />
+    <Compile Include="Assets\Scripts\playerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />

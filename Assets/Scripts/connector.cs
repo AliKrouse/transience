@@ -16,21 +16,16 @@ public class connector : MonoBehaviour
 
     void Start()
     {
-        sr = GetComponentInParent<SpriteRenderer>();
+        sr = transform.parent.GetChild(0).GetComponent<SpriteRenderer>();
     }
     
     void Update()
     {
-        //continuously check (maybe not every frame) for similar color
-        //check if r g and b are each within a certain distance of players values
-        //spawn line renderer pointing at connected player
-        //line needs a script on it to destroy itself if the colors change
-
         foreach (GameObject g in objectsInRadius)
             CheckColorSimilarity(g.GetComponent<SpriteRenderer>());
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay(Collider collision)
     {
         if (collision.CompareTag("Player") || collision.CompareTag("AI"))
         {
@@ -39,7 +34,7 @@ public class connector : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.CompareTag("Player") || collision.CompareTag("AI"))
         {
