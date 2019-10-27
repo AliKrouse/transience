@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112855108702932962}
   - component: {fileID: 2112855108702932963}
+  - component: {fileID: 2344723390197484866}
   m_Layer: 0
   m_Name: lr
   m_TagString: Untagged
@@ -68,7 +69,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -127,3 +128,16 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &2344723390197484866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112855108702932961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c92692448798fb4b9882839894f25b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedObject: {fileID: 0}
