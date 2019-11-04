@@ -5,16 +5,22 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float speed;
+    private Vector2 movementDirection;
 
-    private Vector3 movementDirection;
-    
+    public bool canTransport;
+
+    private void Start()
+    {
+        canTransport = true;
+    }
+
     void Update()
     {
-        movementDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+        movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
     }
 
     private void FixedUpdate()
     {
-        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + transform.TransformDirection(movementDirection));
+        transform.Translate(movementDirection * speed);
     }
 }

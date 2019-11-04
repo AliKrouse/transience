@@ -604,6 +604,10 @@
       <Project>{C540080A-BED7-978E-DDFC-EE09E5DBB722}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{FB59C224-D4E6-39F8-9116-391BC3D3E954}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
       <Name>Unity.TextMeshPro</Name>
@@ -614,14 +618,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Planet Earth Free\SpinFree.cs" />
+    <Compile Include="Assets\Scripts\aiMovement.cs" />
     <Compile Include="Assets\Scripts\colorChanger.cs" />
     <Compile Include="Assets\Scripts\connector.cs" />
     <Compile Include="Assets\Scripts\enforceGravity.cs" />
     <Compile Include="Assets\Scripts\lineScript.cs" />
     <Compile Include="Assets\Scripts\planetScript.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
+    <Compile Include="Assets\Scripts\spawnAI.cs" />
+    <Compile Include="Assets\Scripts\transportCollider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\PolygonChangeShapeWindow.uxml" />
+    <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\SpriteEditor.uss" />
+    <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\SpriteFrameModuleInspector.uxml" />
+    <None Include="Packages\com.unity.2d.sprite\Editor\Unity.2D.Sprite.Editor.asmdef" />
+    <None Include="Packages\com.unity.2d.sprite\Tests\Editor\Unity.2D.Sprite.Package.EditorTests.asmdef" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
